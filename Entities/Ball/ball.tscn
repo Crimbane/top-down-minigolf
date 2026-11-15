@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://nkrb823mc1n3"]
+
+[ext_resource type="Shader" uid="uid://bxrnmyobj1e5s" path="res://Entities/Ball/Ball.gdshader" id="1_njvlh"]
+[ext_resource type="Texture2D" uid="uid://c87i8jyqliibf" path="res://icon.svg" id="2_66s45"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjc7g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nrqo6"]
+shader = ExtResource("1_njvlh")
+shader_parameter/radius = 0.5
+shader_parameter/outline_size = 0.5
+shader_parameter/speed = Vector2(0, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjc7g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_66s45")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ball" type="AnimatableBody2D" unique_id=254097725]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1962009993]
+shape = SubResource("CircleShape2D_fjc7g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1733384562]
+material = SubResource("ShaderMaterial_nrqo6")
+sprite_frames = SubResource("SpriteFrames_fjc7g")
