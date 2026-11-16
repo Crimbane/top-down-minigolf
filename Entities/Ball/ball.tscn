@@ -1,32 +1,52 @@
 [gd_scene format=3 uid="uid://nkrb823mc1n3"]
 
+[ext_resource type="Script" uid="uid://dpy568s3riscj" path="res://Entities/Ball/ball.gd" id="1_66s45"]
 [ext_resource type="Shader" uid="uid://bxrnmyobj1e5s" path="res://Entities/Ball/Ball.gdshader" id="1_njvlh"]
-[ext_resource type="Texture2D" uid="uid://c87i8jyqliibf" path="res://icon.svg" id="2_66s45"]
+[ext_resource type="Texture2D" uid="uid://bncw728e2u26b" path="res://Entities/Ball/Art/Ball.svg" id="2_njvlh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjc7g"]
+radius = 15.0
+
+[sub_resource type="Curve" id="Curve_fjc7g"]
+_data = [Vector2(0, 0.05), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_66s45"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nrqo6"]
 shader = ExtResource("1_njvlh")
 shader_parameter/radius = 0.5
 shader_parameter/outline_size = 0.5
-shader_parameter/speed = Vector2(0, 0)
+shader_parameter/speed = 0.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjc7g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_66s45")
+"texture": ExtResource("2_njvlh")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Ball" type="AnimatableBody2D" unique_id=254097725]
+[node name="Ball" type="RigidBody2D" unique_id=893477834]
+input_pickable = true
+script = ExtResource("1_66s45")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1962009993]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1962009993]
 shape = SubResource("CircleShape2D_fjc7g")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1733384562]
+[node name="ShootingPowerLine" type="Line2D" parent="." unique_id=1056041481]
+visible = false
+points = PackedVector2Array(42, 0, 0, 0)
+width_curve = SubResource("Curve_fjc7g")
+gradient = SubResource("Gradient_66s45")
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Texture" type="AnimatedSprite2D" parent="." unique_id=1733384562]
 material = SubResource("ShaderMaterial_nrqo6")
+scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_fjc7g")

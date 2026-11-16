@@ -16,6 +16,11 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/size/window_width_override=1152
+window/size/window_height_override=648
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -30,9 +35,24 @@ folder_colors={
 "res://Testing/": "purple"
 }
 
+[input]
+
+"Left Click"={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(82, 21),"global_position":Vector2(91, 69),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+"Right Click"={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(94, 5),"global_position":Vector2(103, 53),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=0.0
+2d/default_linear_damp=1.0
 
 [rendering]
 
