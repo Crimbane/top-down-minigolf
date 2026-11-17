@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Top Down Minigolf"
+run/main_scene="uid://dcaiipm4v5tyk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -47,6 +48,13 @@ folder_colors={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(94, 5),"global_position":Vector2(103, 53),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="Ball"
+2d_physics/layer_2="World"
+2d_physics/layer_3="Obstacle"
+2d_physics/layer_4="Flag"
 
 [physics]
 

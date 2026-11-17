@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c4moibjbep4d5"]
+
+[ext_resource type="Texture2D" uid="uid://csvja6uq8eqn5" path="res://Entities/Flag/Art/Flag hole.svg" id="1_k18xe"]
+[ext_resource type="Texture2D" uid="uid://bwsah32k5huhv" path="res://Entities/Flag/Art/Flag pole.svg" id="2_ojgo0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1yug"]
+radius = 29.0
+
+[node name="Flag" type="Area2D" unique_id=457336215]
+collision_layer = 8
+
+[node name="Hole" type="Sprite2D" parent="." unique_id=536056713]
+texture = ExtResource("1_k18xe")
+
+[node name="Pole" type="Sprite2D" parent="." unique_id=1650065466]
+z_index = 1
+texture = ExtResource("2_ojgo0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633552582]
+shape = SubResource("CircleShape2D_t1yug")
