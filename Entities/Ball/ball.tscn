@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpy568s3riscj" path="res://Entities/Ball/ball.gd" id="1_66s45"]
 [ext_resource type="Shader" uid="uid://bxrnmyobj1e5s" path="res://Entities/Ball/Ball.gdshader" id="1_njvlh"]
 [ext_resource type="Texture2D" uid="uid://bncw728e2u26b" path="res://Entities/Ball/Art/Ball.svg" id="2_njvlh"]
+[ext_resource type="Texture2D" uid="uid://bynbsv7748h8t" path="res://Entities/Ball/Art/Football skin v2.svg" id="4_eglru"]
 [ext_resource type="Texture2D" uid="uid://detabf8kmqopr" path="res://Entities/Ball/Art/Football skin.svg" id="4_erdxe"]
 [ext_resource type="Texture2D" uid="uid://1mwjr84l24h2" path="res://Entities/Ball/Art/Godot skin.svg" id="5_eglru"]
 
@@ -35,6 +36,9 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eglru")
+}, {
 "duration": 1.0,
 "texture": ExtResource("4_erdxe")
 }],
@@ -71,4 +75,4 @@ end_cap_mode = 2
 material = SubResource("ShaderMaterial_nrqo6")
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_fjc7g")
-animation = &"godot"
+animation = &"football"
