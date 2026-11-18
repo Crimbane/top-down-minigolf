@@ -1,27 +1,35 @@
 extends RigidBody2D
 
-@onready var shootingPowerLine: Line2D = $ShootingPowerLine
-@onready var texture: AnimatedSprite2D = $Texture
-@onready var shaderMaterial: ShaderMaterial = texture.material
-
 
 const MAX_POWER: float = 500
 const MIN_POWER: float = 50
 const MIN_LINE_WIDTH: float = 10
 const LINE_WIDTH_SCALE: float = 0.05
 const IMPULSE_FORCE_SCALE: float = 3
-var isAiming: bool = false
 
+@onready var shootingPowerLine: Line2D = $ShootingPowerLine
+@onready var texture: AnimatedSprite2D = $Texture
+@onready var trail: Line2D = $Texture/Trail
+@onready var shaderMaterial: ShaderMaterial = texture.material
+
+var skin: String = "default":
+	set(newSkin):
+		skin = newSkin
+		texture.animation = skin
+
+var isAiming: bool = false
 var time: float = 0.0
 
 func _ready() -> void:
 	input_event.connect(_on_input_event)
 	sleeping_state_changed.connect(_on_sleeping_changed)
+	body_entered.connect(_on_collision)
 
 func _process(_delta: float) -> void:
 	if isAiming:
-		var power = clamp(Vector2.ZERO.distance_to(get_local_mouse_position()), MIN_POWER, MAX_POWER)
-		var direction = Vector2.ZERO.direction_to(get_local_mouse_position())
+		var mousePos = get_local_mouse_position()
+		var power = clamp(Vector2.ZERO.distance_to(mousePos), MIN_POWER, MAX_POWER)
+		var direction = Vector2.ZERO.direction_to(mousePos)
 		
 		shootingPowerLine.points = [direction * power, Vector2.ZERO]
 		shootingPowerLine.width = clamp(power * LINE_WIDTH_SCALE, MIN_LINE_WIDTH, MAX_POWER * LINE_WIDTH_SCALE)
@@ -32,6 +40,11 @@ func _process(_delta: float) -> void:
 		else:
 			time = 0.0
 		shaderMaterial.set_shader_parameter("time", time)
+		
+		# Trail
+		trail.add_point(global_position)
+		if trail.points.size() > 50:
+			trail.remove_point(0)
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left Click"):
@@ -60,6 +73,11 @@ func _on_sleeping_changed() -> void:
 		shaderMaterial.set_shader_parameter("time", time)
 		shaderMaterial.set_shader_parameter("direction", Vector2.ZERO)
 		shaderMaterial.set_shader_parameter("offset", newOffset)
+		
+		trail.points = []
+
+func _on_collision(_collisionObject: Node) -> void:
+	shaderMaterial.set_shader_parameter("direction", -linear_velocity.normalized())
 
 func handleShooting() -> void:
 	isAiming = false
@@ -70,4 +88,3 @@ func handleShooting() -> void:
 	
 	shaderMaterial.set_shader_parameter("direction", direction)
 	apply_central_impulse(-direction * power * IMPULSE_FORCE_SCALE)
-	

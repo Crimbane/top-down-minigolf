@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://detabf8kmqopr" path="res://Entities/Ball/Art/Football skin.svg" id="4_erdxe"]
 [ext_resource type="Texture2D" uid="uid://1mwjr84l24h2" path="res://Entities/Ball/Art/Godot skin.svg" id="5_eglru"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eglru"]
+friction = 0.0
+bounce = 1.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjc7g"]
 radius = 15.0
 
@@ -57,7 +61,10 @@ animations = [{
 
 [node name="Ball" type="RigidBody2D" unique_id=893477834]
 input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_eglru")
 lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_66s45")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1962009993]
@@ -75,4 +82,12 @@ end_cap_mode = 2
 material = SubResource("ShaderMaterial_nrqo6")
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_fjc7g")
-animation = &"football"
+animation = &"godot"
+
+[node name="Trail" type="Line2D" parent="Texture" unique_id=1153866626]
+top_level = true
+width = 8.0
+width_curve = SubResource("Curve_fjc7g")
+gradient = SubResource("Gradient_66s45")
+begin_cap_mode = 2
+end_cap_mode = 2
