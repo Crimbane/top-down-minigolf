@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://boedkfyjjsgu7"]
+
+[ext_resource type="Texture2D" uid="uid://coaop4600mmlb" path="res://Entities/Obstacles/Spinner/Art/Spinner.svg" id="1_jxjud"]
+[ext_resource type="Script" uid="uid://d115ppahubjd6" path="res://Entities/Obstacles/Spinner/spinner.gd" id="1_vjhro"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjc7g"]
+radius = 19.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nrqo6"]
+radius = 6.0
+height = 84.0
+
+[node name="Spinner" type="AnimatableBody2D" unique_id=1317019962]
+collision_layer = 2
+script = ExtResource("1_vjhro")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1718702859]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jxjud")
+
+[node name="CenterCollision" type="CollisionShape2D" parent="." unique_id=2050166107]
+shape = SubResource("CircleShape2D_fjc7g")
+
+[node name="ArmCollision1" type="CollisionShape2D" parent="." unique_id=396965563]
+position = Vector2(-52, -0.25)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nrqo6")
+
+[node name="ArmCollision2" type="CollisionShape2D" parent="." unique_id=902059951]
+position = Vector2(0.25, -52)
+shape = SubResource("CapsuleShape2D_nrqo6")
+
+[node name="ArmCollision3" type="CollisionShape2D" parent="." unique_id=546198013]
+position = Vector2(52, 0.25)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nrqo6")
+
+[node name="ArmCollision4" type="CollisionShape2D" parent="." unique_id=154348688]
+position = Vector2(-0.25, 52)
+shape = SubResource("CapsuleShape2D_nrqo6")

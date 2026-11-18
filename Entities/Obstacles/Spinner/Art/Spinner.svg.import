@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coaop4600mmlb"
-path="res://.godot/imported/Spinner.svg-6af86c4446ad574dac3aff770b0640ef.ctex"
+path="res://.godot/imported/Spinner.svg-742779fa9413bdd056cc2523e2ce82a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Obstacles/Spinner/Spinner.svg"
-dest_files=["res://.godot/imported/Spinner.svg-6af86c4446ad574dac3aff770b0640ef.ctex"]
+source_file="res://Entities/Obstacles/Spinner/Art/Spinner.svg"
+dest_files=["res://.godot/imported/Spinner.svg-742779fa9413bdd056cc2523e2ce82a8.ctex"]
 
 [params]
 

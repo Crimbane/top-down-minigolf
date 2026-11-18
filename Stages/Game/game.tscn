@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://nkrb823mc1n3" path="res://Entities/Ball/ball.tscn" id="1_667yh"]
 [ext_resource type="PackedScene" uid="uid://b2ewx6gsy4we1" path="res://Stages/Tileset/tile_map_layer.tscn" id="1_lks6s"]
 [ext_resource type="PackedScene" uid="uid://c4moibjbep4d5" path="res://Entities/Flag/flag.tscn" id="4_cgpgc"]
+[ext_resource type="PackedScene" uid="uid://dr7pv7miiqn11" path="res://Entities/Obstacles/Wall/wall.tscn" id="4_mv0ex"]
+[ext_resource type="PackedScene" uid="uid://boedkfyjjsgu7" path="res://Entities/Obstacles/Spinner/spinner.tscn" id="5_mv0ex"]
 
 [node name="Game" type="Node" unique_id=2143409741]
 
@@ -12,7 +14,12 @@ tile_map_data = PackedByteArray("AAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAcAAQAAAAA
 [node name="Ball" parent="." unique_id=254097725 instance=ExtResource("1_667yh")]
 z_index = 1
 position = Vector2(383, 306)
-collision_mask = 2
 
 [node name="Flag" parent="." unique_id=1075232730 instance=ExtResource("4_cgpgc")]
 position = Vector2(174, 926)
+
+[node name="Wall" parent="." unique_id=182898550 instance=ExtResource("4_mv0ex")]
+position = Vector2(787, 503)
+
+[node name="Spinner" parent="." unique_id=1317019962 instance=ExtResource("5_mv0ex")]
+position = Vector2(538, 654)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1ibsdf7ytrd6"
-path="res://.godot/imported/Wall.svg-a17f8ad25a5173e88fb513787413c586.ctex"
+path="res://.godot/imported/Wall.svg-cb2fbb13dd883f8d4005de538d469977.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Obstacles/Wall/Wall.svg"
-dest_files=["res://.godot/imported/Wall.svg-a17f8ad25a5173e88fb513787413c586.ctex"]
+source_file="res://Entities/Obstacles/Wall/Art/Wall.svg"
+dest_files=["res://.godot/imported/Wall.svg-cb2fbb13dd883f8d4005de538d469977.ctex"]
 
 [params]
 
