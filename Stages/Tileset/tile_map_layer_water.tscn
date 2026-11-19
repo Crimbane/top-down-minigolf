@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b4vbtgn7yoygg"]
+
+[ext_resource type="Shader" uid="uid://dh6iggpwxxvuy" path="res://Stages/Tileset/water.gdshader" id="1_vmaci"]
+[ext_resource type="Texture2D" uid="uid://mdkc60477shh" path="res://Stages/Tileset/Water tile.svg" id="1_x4ksy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x4ksy"]
+shader = ExtResource("1_vmaci")
+shader_parameter/direction1 = Vector2(0.05, 0.01)
+shader_parameter/direction2 = Vector2(0.03, -0.02)
+shader_parameter/layer2Scale = 1.15
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vmaci"]
+texture = ExtResource("1_x4ksy")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_x4ksy")
+
+[sub_resource type="TileSet" id="TileSet_t1yug"]
+tile_size = Vector2i(512, 512)
+sources/0 = SubResource("TileSetAtlasSource_vmaci")
+
+[node name="TileMapLayer Water" type="TileMapLayer" unique_id=783580211]
+texture_repeat = 2
+scale = Vector2(0.35, 0.35)
+tile_map_data = PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_t1yug")
