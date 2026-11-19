@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bynbsv7748h8t" path="res://Entities/Ball/Art/Football skin v2.svg" id="4_eglru"]
 [ext_resource type="Texture2D" uid="uid://detabf8kmqopr" path="res://Entities/Ball/Art/Football skin.svg" id="4_erdxe"]
 [ext_resource type="Texture2D" uid="uid://1mwjr84l24h2" path="res://Entities/Ball/Art/Godot skin.svg" id="5_eglru"]
+[ext_resource type="Texture2D" uid="uid://b87d1ha7ois0k" path="res://Systems/UI/Art/Indicator arrow.svg" id="7_0euoy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eglru"]
 friction = 0.0
@@ -25,6 +26,7 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
 shader = ExtResource("1_njvlh")
 shader_parameter/radius = 0.5
 shader_parameter/outline_size = 0.5
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/direction = Vector2(0, 0)
 shader_parameter/offset = Vector2(0, 0)
 shader_parameter/time = 0.0
@@ -59,6 +61,44 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_0euoy"]
+resource_name = "Arrow Bounce"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -45), Vector2(0, -55), Vector2(0, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_fu2ts"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -45)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m50eh"]
+_data = {
+&"Arrow Bounce": SubResource("Animation_0euoy"),
+&"RESET": SubResource("Animation_fu2ts")
+}
+
 [node name="Ball" type="RigidBody2D" unique_id=893477834]
 collision_mask = 2
 input_pickable = true
@@ -92,3 +132,18 @@ width_curve = SubResource("Curve_fjc7g")
 gradient = SubResource("Gradient_66s45")
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1146778184]
+visible = false
+position = Vector2(0, -45)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_0euoy")
+
+[node name="Shadow" type="Sprite2D" parent="Arrow" unique_id=1510802627]
+self_modulate = Color(0, 0, 0, 0.16470589)
+show_behind_parent = true
+scale = Vector2(1.255, 1.2)
+texture = ExtResource("7_0euoy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1293585307]
+libraries/ = SubResource("AnimationLibrary_m50eh")

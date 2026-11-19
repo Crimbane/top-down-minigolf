@@ -7,6 +7,8 @@ const MIN_LINE_WIDTH: float = 10
 const LINE_WIDTH_SCALE: float = 0.05
 const IMPULSE_FORCE_SCALE: float = 3
 
+@onready var animationPlayer: AnimationPlayer = $AnimationPlayer
+@onready var arrow: Sprite2D = $Arrow
 @onready var shootingPowerLine: Line2D = $ShootingPowerLine
 @onready var texture: AnimatedSprite2D = $Texture
 @onready var trail: Line2D = $Texture/Trail
@@ -17,6 +19,8 @@ var skin: String = "default":
 		skin = newSkin
 		texture.animation = skin
 
+var arrowBounceAnimation: String = "Arrow Bounce"
+
 var isAiming: bool = false
 var time: float = 0.0
 
@@ -24,6 +28,8 @@ func _ready() -> void:
 	input_event.connect(_on_input_event)
 	sleeping_state_changed.connect(_on_sleeping_changed)
 	body_entered.connect(_on_collision)
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 
 func _process(_delta: float) -> void:
 	if isAiming:
@@ -55,26 +61,54 @@ func _unhandled_input(event: InputEvent) -> void:
 		if isAiming:
 			isAiming = false
 			shootingPowerLine.visible = false
+			arrow.visible = true
+			animationPlayer.current_animation = arrowBounceAnimation
 
 func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("Left Click"):
-		if not isAiming and sleeping:
+		if not isAiming and sleeping and shaderMaterial and texture:
 			isAiming = true
 			shootingPowerLine.visible = true
+			texture.scale = Vector2(0.1, 0.1)
+			shaderMaterial.set_shader_parameter("outline_size", 0.5)
+			shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
 
 func _on_sleeping_changed() -> void:
-	if sleeping and shaderMaterial:
-		var currentDirection = shaderMaterial.get_shader_parameter("direction")
-		var currentTime = shaderMaterial.get_shader_parameter("time")
-		var currentOffset = shaderMaterial.get_shader_parameter("offset")
-		var newOffset = currentDirection * currentTime + currentOffset
-		
-		time = 0.0
-		shaderMaterial.set_shader_parameter("time", time)
-		shaderMaterial.set_shader_parameter("direction", Vector2.ZERO)
-		shaderMaterial.set_shader_parameter("offset", newOffset)
-		
-		trail.points = []
+	if shaderMaterial and animationPlayer and arrow:
+		if sleeping:
+			arrow.visible = true
+			animationPlayer.current_animation = arrowBounceAnimation
+			
+			var currentDirection = shaderMaterial.get_shader_parameter("direction")
+			var currentTime = shaderMaterial.get_shader_parameter("time")
+			var currentOffset = shaderMaterial.get_shader_parameter("offset")
+			var newOffset = currentDirection * currentTime + currentOffset
+			
+			time = 0.0
+			shaderMaterial.set_shader_parameter("time", time)
+			shaderMaterial.set_shader_parameter("direction", Vector2.ZERO)
+			shaderMaterial.set_shader_parameter("offset", newOffset)
+			
+			trail.points = []
+		elif not sleeping:
+			arrow.visible = false
+			animationPlayer.current_animation = ""
+
+func _on_mouse_entered() -> void:
+	if sleeping and not isAiming and shaderMaterial and texture:
+		arrow.visible = false
+		animationPlayer.current_animation = ""
+		texture.scale = Vector2(0.125, 0.125)
+		shaderMaterial.set_shader_parameter("outline_size", 1.0)
+		shaderMaterial.set_shader_parameter("outline_color", Color(1.0, 1.0, 1.0, 1.0))
+
+func _on_mouse_exited() -> void:
+	if sleeping and not isAiming and shaderMaterial and texture:
+		arrow.visible = true
+		animationPlayer.current_animation = arrowBounceAnimation
+		texture.scale = Vector2(0.1, 0.1)
+		shaderMaterial.set_shader_parameter("outline_size", 0.5)
+		shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
 
 func _on_collision(_collisionObject: Node) -> void:
 	shaderMaterial.set_shader_parameter("direction", -linear_velocity.normalized())
