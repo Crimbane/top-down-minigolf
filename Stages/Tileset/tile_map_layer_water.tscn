@@ -23,7 +23,6 @@ texture_region_size = Vector2i(512, 512)
 shader = ExtResource("3_v2oos")
 shader_parameter/streaks_Texture = ExtResource("5_fyva8")
 shader_parameter/foamBorders_Texture = ExtResource("4_v71xr")
-shader_parameter/foam_speed = Vector2(-0.25, 0)
 shader_parameter/streak_speed = Vector2(-0.9, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v71xr"]
