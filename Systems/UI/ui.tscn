@@ -31,6 +31,7 @@ offset_top = 20.0
 offset_right = 90.0
 offset_bottom = 140.0
 grow_horizontal = 2
+mouse_filter = 2
 
 [node name="StrokesVBox" type="VBoxContainer" parent="UIManager/StrokesPanel" unique_id=1447503335]
 custom_minimum_size = Vector2(180, 116)
