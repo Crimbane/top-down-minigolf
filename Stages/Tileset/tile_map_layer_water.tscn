@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bw28kg260mnvl" path="res://Stages/Tileset/Rushing water/Rushing water.svg" id="4_g5wvi"]
 [ext_resource type="Texture2D" uid="uid://deotnw102ffg3" path="res://Stages/Tileset/Rushing water/Rushing water foam borders.svg" id="4_v71xr"]
 [ext_resource type="Texture2D" uid="uid://dxokwucj3iaja" path="res://Stages/Tileset/Rushing water/Rushing water streaks.svg" id="5_fyva8"]
-[ext_resource type="Texture2D" uid="uid://p333lnr6by81" path="res://Stages/Tileset/Sand seamless.png" id="7_fyva8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x4ksy"]
 shader = ExtResource("1_vmaci")
@@ -33,19 +32,13 @@ texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
 0:0/0/material = SubResource("ShaderMaterial_2rwl0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpn5y"]
-texture = ExtResource("7_fyva8")
-texture_region_size = Vector2i(512, 512)
-0:0/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_t1yug"]
 tile_size = Vector2i(512, 512)
 sources/0 = SubResource("TileSetAtlasSource_vmaci")
 sources/1 = SubResource("TileSetAtlasSource_v71xr")
-sources/2 = SubResource("TileSetAtlasSource_rpn5y")
 
 [node name="TileMapLayer Water" type="TileMapLayer" unique_id=783580211]
 texture_repeat = 2
 scale = Vector2(0.35, 0.35)
-tile_map_data = PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_t1yug")
