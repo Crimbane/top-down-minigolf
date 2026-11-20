@@ -8,6 +8,8 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_14tvy"]
 font_size = 48
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjc7g"]
+
 [node name="UI" type="CanvasLayer" unique_id=1691093207]
 
 [node name="UIManager" type="Control" parent="." unique_id=2022582612]
@@ -60,10 +62,9 @@ anchor_right = 1.0
 offset_left = -200.0
 offset_top = 20.0
 offset_right = -20.0
-offset_bottom = 136.0
+offset_bottom = 1060.0
 grow_horizontal = 0
-theme_override_constants/separation = 42
-alignment = 1
+theme_override_constants/separation = 36
 
 [node name="HoleInfoPanel" type="VBoxContainer" parent="UIManager/RightPanel" unique_id=1696536795]
 custom_minimum_size = Vector2(180, 150)
@@ -112,19 +113,32 @@ text = "3"
 label_settings = SubResource("LabelSettings_14tvy")
 horizontal_alignment = 1
 
-[node name="RestartHoleButton" type="Button" parent="UIManager/RightPanel" unique_id=1705453412]
+[node name="InspectMapButton" type="Button" parent="UIManager/RightPanel" unique_id=1705453412]
 custom_minimum_size = Vector2(116, 116)
 custom_maximum_size = Vector2(116, 116)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Restart Hole"
+text = "Inspect Map"
+
+[node name="Spacer" type="PanelContainer" parent="UIManager/RightPanel" unique_id=1097116256]
+custom_minimum_size = Vector2(0, 456)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")
+
+[node name="RestartMapButton" type="Button" parent="UIManager/RightPanel" unique_id=608452145]
+custom_minimum_size = Vector2(116, 116)
+custom_maximum_size = Vector2(116, 116)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart Map"
 
 [node name="LeftPanel" type="VBoxContainer" parent="UIManager" unique_id=592395168]
-layout_mode = 0
+layout_mode = 1
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 136.0
-offset_bottom = 256.0
+offset_right = 137.0
+offset_bottom = 1060.0
 theme_override_constants/separation = 24
 
 [node name="EscapeMenuButton" type="Button" parent="UIManager/LeftPanel" unique_id=2126701158]

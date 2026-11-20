@@ -33,3 +33,5 @@ rotation = -0.7853982
 
 [node name="Spinner" parent="." unique_id=1317019962 instance=ExtResource("5_mv0ex")]
 position = Vector2(463, 360)
+
+[node name="MapContainer" type="Node2D" parent="." unique_id=1209809435]
