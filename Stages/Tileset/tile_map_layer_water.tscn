@@ -17,6 +17,7 @@ shader_parameter/layer2Scale = 1.15
 texture = ExtResource("1_x4ksy")
 texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
+0:0/0/modulate = Color(0.7058824, 0.7058824, 0.8235294, 1)
 0:0/0/material = SubResource("ShaderMaterial_x4ksy")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2rwl0"]
@@ -29,6 +30,7 @@ shader_parameter/streak_speed = Vector2(-0.9, 0)
 texture = ExtResource("4_g5wvi")
 texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
+0:0/0/modulate = Color(0.7058824, 0.7058824, 0.8235294, 1)
 0:0/0/material = SubResource("ShaderMaterial_2rwl0")
 
 [sub_resource type="TileSet" id="TileSet_t1yug"]
