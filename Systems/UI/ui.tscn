@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://dyv1f7rv35wvi"]
+
+[ext_resource type="Script" uid="uid://dlovh3y3shsmh" path="res://Systems/UI/ui_manager.gd" id="1_22tvq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fjc7g"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_14tvy"]
+font_size = 48
+
+[node name="UI" type="CanvasLayer" unique_id=1691093207]
+
+[node name="UIManager" type="Control" parent="." unique_id=2022582612]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_22tvq")
+
+[node name="StrokesPanel" type="PanelContainer" parent="UIManager" unique_id=1642184987]
+custom_minimum_size = Vector2(180, 116)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 140.0
+grow_horizontal = 2
+
+[node name="StrokesVBox" type="VBoxContainer" parent="UIManager/StrokesPanel" unique_id=1447503335]
+custom_minimum_size = Vector2(180, 116)
+custom_maximum_size = Vector2(180, 116)
+layout_mode = 2
+alignment = 1
+
+[node name="StrokesLabel" type="Label" parent="UIManager/StrokesPanel/StrokesVBox" unique_id=1779521077]
+layout_mode = 2
+text = "STROKES"
+label_settings = SubResource("LabelSettings_fjc7g")
+horizontal_alignment = 1
+
+[node name="StrokesValue" type="Label" parent="UIManager/StrokesPanel/StrokesVBox" unique_id=1637985723]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_14tvy")
+horizontal_alignment = 1
+
+[node name="RightPanel" type="VBoxContainer" parent="UIManager" unique_id=736543184]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 136.0
+grow_horizontal = 0
+theme_override_constants/separation = 42
+alignment = 1
+
+[node name="HoleInfoPanel" type="VBoxContainer" parent="UIManager/RightPanel" unique_id=1696536795]
+custom_minimum_size = Vector2(180, 150)
+custom_maximum_size = Vector2(180, -1)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="HolePanel" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel" unique_id=738789543]
+custom_minimum_size = Vector2(180, 116)
+layout_mode = 2
+
+[node name="HoleVbox" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=725535942]
+layout_mode = 2
+
+[node name="HoleLabel" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/HoleVbox" unique_id=1305872752]
+layout_mode = 2
+text = "HOLE"
+label_settings = SubResource("LabelSettings_fjc7g")
+horizontal_alignment = 1
+
+[node name="HoleValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/HoleVbox" unique_id=397364159]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_14tvy")
+horizontal_alignment = 1
+
+[node name="ParPanel" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel" unique_id=1263200432]
+custom_minimum_size = Vector2(180, 116)
+layout_mode = 2
+
+[node name="ParVbox" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel" unique_id=1362123875]
+layout_mode = 2
+
+[node name="ParLabel" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel/ParVbox" unique_id=309655400]
+layout_mode = 2
+text = "PAR"
+label_settings = SubResource("LabelSettings_fjc7g")
+horizontal_alignment = 1
+
+[node name="ParValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel/ParVbox" unique_id=1051451701]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3"
+label_settings = SubResource("LabelSettings_14tvy")
+horizontal_alignment = 1
+
+[node name="RestartHoleButton" type="Button" parent="UIManager/RightPanel" unique_id=1705453412]
+custom_minimum_size = Vector2(116, 116)
+custom_maximum_size = Vector2(116, 116)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart Hole"
+
+[node name="LeftPanel" type="VBoxContainer" parent="UIManager" unique_id=592395168]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 136.0
+offset_bottom = 256.0
+theme_override_constants/separation = 24
+
+[node name="EscapeMenuButton" type="Button" parent="UIManager/LeftPanel" unique_id=2126701158]
+custom_minimum_size = Vector2(116, 116)
+layout_mode = 2
+text = "Escape Menu"
+
+[node name="SkinsButton" type="Button" parent="UIManager/LeftPanel" unique_id=2047385862]
+custom_minimum_size = Vector2(116, 116)
+layout_mode = 2
+text = "Skins"
+
+[node name="AchievementsButton" type="Button" parent="UIManager/LeftPanel" unique_id=1259573194]
+custom_minimum_size = Vector2(116, 116)
+layout_mode = 2
+text = "Achievements"

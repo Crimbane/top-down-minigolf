@@ -69,6 +69,8 @@ func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) ->
 		if not isAiming and sleeping and shaderMaterial and texture:
 			isAiming = true
 			shootingPowerLine.visible = true
+			arrow.visible = false
+			animationPlayer.current_animation = ""
 			texture.scale = Vector2(0.1, 0.1)
 			shaderMaterial.set_shader_parameter("outline_size", 0.5)
 			shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
@@ -122,3 +124,5 @@ func handleShooting() -> void:
 	
 	shaderMaterial.set_shader_parameter("direction", direction)
 	apply_central_impulse(-direction * power * IMPULSE_FORCE_SCALE)
+	
+	GameManager.addStrokes()
