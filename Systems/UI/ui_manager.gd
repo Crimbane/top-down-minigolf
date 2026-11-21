@@ -12,7 +12,6 @@ func _ready() -> void:
 
 
 func updateLabels() -> void:
-	strokesLabel.text = str(GameManager.currentHoleStrokes)
+	strokesLabel.text = str(GameManager.strokes)
 	holeLabel.text = str(GameManager.currentHole)
 	parLabel.text = str(GameManager.currentHolePar)
-	

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dyv1f7rv35wvi"]
 
 [ext_resource type="Script" uid="uid://dlovh3y3shsmh" path="res://Systems/UI/ui_manager.gd" id="1_22tvq"]
+[ext_resource type="Script" uid="uid://dt2ua2x83aad7" path="res://Systems/UI/test_button.gd" id="2_14tvy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjc7g"]
 font_size = 32
@@ -109,7 +110,7 @@ horizontal_alignment = 1
 [node name="ParValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel/ParVbox" unique_id=1051451701]
 unique_name_in_owner = true
 layout_mode = 2
-text = "3"
+text = "6"
 label_settings = SubResource("LabelSettings_14tvy")
 horizontal_alignment = 1
 
@@ -155,3 +156,17 @@ text = "Skins"
 custom_minimum_size = Vector2(116, 116)
 layout_mode = 2
 text = "Achievements"
+
+[node name="TestButton1" type="Button" parent="UIManager/LeftPanel" unique_id=2135828388]
+custom_minimum_size = Vector2(116, 116)
+layout_mode = 2
+text = "TestMap1"
+script = ExtResource("2_14tvy")
+map = -1
+
+[node name="TestButton2" type="Button" parent="UIManager/LeftPanel" unique_id=966477958]
+custom_minimum_size = Vector2(116, 116)
+layout_mode = 2
+text = "TestMap2"
+script = ExtResource("2_14tvy")
+map = -2
