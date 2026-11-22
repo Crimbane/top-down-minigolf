@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dlovh3y3shsmh" path="res://Systems/UI/ui_manager.gd" id="1_22tvq"]
 [ext_resource type="Script" uid="uid://dt2ua2x83aad7" path="res://Systems/UI/test_button.gd" id="2_14tvy"]
+[ext_resource type="Texture2D" uid="uid://d0lqsgdl10rhf" path="res://Systems/UI/Art/Skins icon with background.svg" id="3_31fyy"]
+[ext_resource type="Texture2D" uid="uid://diuh42x6c8gba" path="res://Systems/UI/Art/Achievement icon with background.svg" id="4_g01m3"]
+[ext_resource type="Texture2D" uid="uid://b8cp1qe4c064s" path="res://Systems/UI/Art/Paper notes wood background.png" id="5_mumph"]
+[ext_resource type="Texture2D" uid="uid://dpiygo4chp0uu" path="res://Systems/UI/Art/Escape menu icon with background.svg" id="6_o4wqe"]
+[ext_resource type="Texture2D" uid="uid://jhrk025jj4my" path="res://Systems/UI/Art/Inspect map icon with background.svg" id="7_vovoe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjc7g"]
 font_size = 32
@@ -170,3 +175,27 @@ layout_mode = 2
 text = "TestMap2"
 script = ExtResource("2_14tvy")
 map = -2
+
+[node name="SkinsIconWithBackground" type="Sprite2D" parent="." unique_id=1733110861]
+position = Vector2(207, 219)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_31fyy")
+
+[node name="AchievementIconWithBackground" type="Sprite2D" parent="." unique_id=1766895816]
+position = Vector2(205, 359)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_g01m3")
+
+[node name="PaperNotesWoodBackground" type="Sprite2D" parent="." unique_id=843135914]
+position = Vector2(1595, 251)
+texture = ExtResource("5_mumph")
+
+[node name="EscapeMenuIconWithBackground" type="Sprite2D" parent="." unique_id=932052305]
+position = Vector2(208, 79)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_o4wqe")
+
+[node name="InspectMapIconWithBackground" type="Sprite2D" parent="." unique_id=1012854407]
+position = Vector2(1809, 485)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_vovoe")
