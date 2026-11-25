@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://d0lqsgdl10rhf" path="res://Systems/UI/Art/Skins icon with background.svg" id="3_31fyy"]
 [ext_resource type="Texture2D" uid="uid://diuh42x6c8gba" path="res://Systems/UI/Art/Achievement icon with background.svg" id="4_g01m3"]
 [ext_resource type="Texture2D" uid="uid://b8cp1qe4c064s" path="res://Systems/UI/Art/Paper notes wood background.png" id="5_mumph"]
-[ext_resource type="Texture2D" uid="uid://dpiygo4chp0uu" path="res://Systems/UI/Art/Escape menu icon with background.svg" id="6_o4wqe"]
+[ext_resource type="Texture2D" uid="uid://drs4ykjtbswr0" path="res://Systems/UI/Art/Escape menu icon with background.png" id="6_vovoe"]
 [ext_resource type="Texture2D" uid="uid://jhrk025jj4my" path="res://Systems/UI/Art/Inspect map icon with background.svg" id="7_vovoe"]
+[ext_resource type="Texture2D" uid="uid://cbbhqqu04pbqi" path="res://Systems/UI/Art/Settings Menu/Settings menu boat.svg" id="8_2bpht"]
+[ext_resource type="Texture2D" uid="uid://lrtm8h1lyxqm" path="res://Systems/UI/Art/Settings Menu/Settings menu volume slider.svg" id="9_xo8aq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjc7g"]
 font_size = 32
@@ -193,9 +195,26 @@ texture = ExtResource("5_mumph")
 [node name="EscapeMenuIconWithBackground" type="Sprite2D" parent="." unique_id=932052305]
 position = Vector2(208, 79)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_o4wqe")
+texture = ExtResource("6_vovoe")
 
 [node name="InspectMapIconWithBackground" type="Sprite2D" parent="." unique_id=1012854407]
 position = Vector2(1809, 485)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_vovoe")
+
+[node name="SettingsMenuBoat" type="Sprite2D" parent="." unique_id=1745825818]
+visible = false
+position = Vector2(883, 521)
+texture = ExtResource("8_2bpht")
+
+[node name="SettingsMenuVolumeSlider" type="Sprite2D" parent="SettingsMenuBoat" unique_id=74119522]
+position = Vector2(6, 2)
+texture = ExtResource("9_xo8aq")
+
+[node name="SettingsMenuVolumeSlider2" type="Sprite2D" parent="SettingsMenuBoat" unique_id=272715120]
+position = Vector2(-131, 1)
+texture = ExtResource("9_xo8aq")
+
+[node name="SettingsMenuVolumeSlider3" type="Sprite2D" parent="SettingsMenuBoat" unique_id=1968672020]
+position = Vector2(150, 3)
+texture = ExtResource("9_xo8aq")

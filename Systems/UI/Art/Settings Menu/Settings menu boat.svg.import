@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpiygo4chp0uu"
-path="res://.godot/imported/Escape menu icon with background.svg-6277dd80da1e6cbbf4c8c5cc3b8613c8.ctex"
+uid="uid://cbbhqqu04pbqi"
+path="res://.godot/imported/Settings menu boat.svg-177eb99386a0142cc7e32d1d38f82700.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Systems/UI/Art/Escape menu icon with background.svg"
-dest_files=["res://.godot/imported/Escape menu icon with background.svg-6277dd80da1e6cbbf4c8c5cc3b8613c8.ctex"]
+source_file="res://Systems/UI/Art/Settings Menu/Settings menu boat.svg"
+dest_files=["res://.godot/imported/Settings menu boat.svg-177eb99386a0142cc7e32d1d38f82700.ctex"]
 
 [params]
 
