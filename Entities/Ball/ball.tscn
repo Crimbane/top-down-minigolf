@@ -148,4 +148,5 @@ texture = ExtResource("7_0euoy")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1293585307]
 libraries/ = SubResource("AnimationLibrary_m50eh")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1555801635]
+[node name="BallCam" type="Camera2D" parent="." unique_id=1555801635]
+unique_name_in_owner = true

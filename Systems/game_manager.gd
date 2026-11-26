@@ -3,8 +3,12 @@ extends Node
 
 var uiManager: UIManager
 var mapContainer: Node2D
-var mapNode: Node = null
+var mapInspectCam: Camera2D
+var mapNode: Node
+var tileMapLayer: TileMapLayer
+var ballCam: Camera2D
 
+var currentCam: Camera2D
 var currentHole: int = 0
 var currentHolePar: int = 0
 var strokes: int = 0

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b30ihjyvfis6s"]
+
+[ext_resource type="Script" uid="uid://c78oo7c24hwfs" path="res://Stages/Game/map_inspect_cam.gd" id="1_eqxfx"]
+
+[node name="MapInspectCam" type="Camera2D" unique_id=593422274]
+script = ExtResource("1_eqxfx")

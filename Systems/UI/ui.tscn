@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dt2ua2x83aad7" path="res://Systems/UI/test_button.gd" id="2_14tvy"]
 [ext_resource type="Texture2D" uid="uid://d0lqsgdl10rhf" path="res://Systems/UI/Art/Skins icon with background.svg" id="3_31fyy"]
 [ext_resource type="Texture2D" uid="uid://diuh42x6c8gba" path="res://Systems/UI/Art/Achievement icon with background.svg" id="4_g01m3"]
+[ext_resource type="Script" uid="uid://dxsa1n0pe246k" path="res://Systems/UI/inspect_map_button.gd" id="4_xo8aq"]
 [ext_resource type="Texture2D" uid="uid://b8cp1qe4c064s" path="res://Systems/UI/Art/Paper notes wood background.png" id="5_mumph"]
 [ext_resource type="Texture2D" uid="uid://drs4ykjtbswr0" path="res://Systems/UI/Art/Escape menu icon with background.png" id="6_vovoe"]
 [ext_resource type="Texture2D" uid="uid://jhrk025jj4my" path="res://Systems/UI/Art/Inspect map icon with background.svg" id="7_vovoe"]
@@ -16,7 +17,106 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_14tvy"]
 font_size = 48
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjc7g"]
+texture = ExtResource("5_mumph")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjc7g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2bpht"]
+font_size = 30
+font_color = Color(0.38039216, 0.19215687, 1, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.23529412)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xo8aq"]
+font_size = 48
+font_color = Color(0.38039216, 0.19215687, 1, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.23529412)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2tau"]
+texture = ExtResource("7_vovoe")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xo8aq"]
+load_path = "res://.godot/imported/Inspect map icon with background.svg-905e4cb977209ff032dd3ca688fe911c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70d3y"]
+texture = SubResource("CompressedTexture2D_xo8aq")
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_giag7"]
+load_path = "res://.godot/imported/Inspect map icon with background.svg-905e4cb977209ff032dd3ca688fe911c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qdu1p"]
+texture = SubResource("CompressedTexture2D_giag7")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oc4l8"]
+texture = ExtResource("6_vovoe")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2bpht"]
+load_path = "res://.godot/imported/Escape menu icon with background.png-ea8288f061ccc3e2313832e05aadef38.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xo8aq"]
+texture = SubResource("CompressedTexture2D_2bpht")
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhltn"]
+load_path = "res://.godot/imported/Escape menu icon with background.png-ea8288f061ccc3e2313832e05aadef38.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxfak"]
+texture = SubResource("CompressedTexture2D_uhltn")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bpht"]
+texture = ExtResource("3_31fyy")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lep1l"]
+load_path = "res://.godot/imported/Skins icon with background.svg-cc5aab3e102b1d67a56edba64d3dfc23.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31m62"]
+texture = SubResource("CompressedTexture2D_lep1l")
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5t6h7"]
+load_path = "res://.godot/imported/Skins icon with background.svg-cc5aab3e102b1d67a56edba64d3dfc23.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_50h6r"]
+texture = SubResource("CompressedTexture2D_5t6h7")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhltn"]
+texture = ExtResource("4_g01m3")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2t3r2"]
+load_path = "res://.godot/imported/Achievement icon with background.svg-2e31a2768990c116d7070c2498487340.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppjn4"]
+texture = SubResource("CompressedTexture2D_2t3r2")
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b8hlr"]
+load_path = "res://.godot/imported/Achievement icon with background.svg-2e31a2768990c116d7070c2498487340.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uawr"]
+texture = SubResource("CompressedTexture2D_b8hlr")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
 
 [node name="UI" type="CanvasLayer" unique_id=1691093207]
 
@@ -74,51 +174,61 @@ offset_bottom = 1060.0
 grow_horizontal = 0
 theme_override_constants/separation = 36
 
-[node name="HoleInfoPanel" type="VBoxContainer" parent="UIManager/RightPanel" unique_id=1696536795]
-custom_minimum_size = Vector2(180, 150)
-custom_maximum_size = Vector2(180, -1)
+[node name="HoleInfoPanel" type="PanelContainer" parent="UIManager/RightPanel" unique_id=71345725]
+custom_minimum_size = Vector2(180, 360)
+custom_maximum_size = Vector2(180, 360)
 layout_mode = 2
-theme_override_constants/separation = 12
-alignment = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_fjc7g")
 
-[node name="HolePanel" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel" unique_id=738789543]
-custom_minimum_size = Vector2(180, 116)
+[node name="HolePanel" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel" unique_id=1272676566]
+custom_minimum_size = Vector2(180, 360)
 layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Spacer" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=1566768195]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")
 
 [node name="HoleVbox" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=725535942]
 layout_mode = 2
+theme_override_constants/separation = -13
 
 [node name="HoleLabel" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/HoleVbox" unique_id=1305872752]
 layout_mode = 2
 text = "HOLE"
-label_settings = SubResource("LabelSettings_fjc7g")
+label_settings = SubResource("LabelSettings_2bpht")
 horizontal_alignment = 1
 
 [node name="HoleValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/HoleVbox" unique_id=397364159]
 unique_name_in_owner = true
 layout_mode = 2
 text = "1"
-label_settings = SubResource("LabelSettings_14tvy")
+label_settings = SubResource("LabelSettings_xo8aq")
 horizontal_alignment = 1
 
-[node name="ParPanel" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel" unique_id=1263200432]
-custom_minimum_size = Vector2(180, 116)
+[node name="Spacer2" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=1892435543]
+custom_minimum_size = Vector2(0, 1)
 layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")
 
-[node name="ParVbox" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel" unique_id=1362123875]
+[node name="ParVbox" type="VBoxContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=1362123875]
 layout_mode = 2
+theme_override_constants/separation = -13
 
-[node name="ParLabel" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel/ParVbox" unique_id=309655400]
+[node name="ParLabel" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/ParVbox" unique_id=309655400]
 layout_mode = 2
 text = "PAR"
-label_settings = SubResource("LabelSettings_fjc7g")
+label_settings = SubResource("LabelSettings_2bpht")
 horizontal_alignment = 1
 
-[node name="ParValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/ParPanel/ParVbox" unique_id=1051451701]
+[node name="ParValue" type="Label" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel/ParVbox" unique_id=1051451701]
 unique_name_in_owner = true
 layout_mode = 2
 text = "6"
-label_settings = SubResource("LabelSettings_14tvy")
+label_settings = SubResource("LabelSettings_xo8aq")
 horizontal_alignment = 1
 
 [node name="InspectMapButton" type="Button" parent="UIManager/RightPanel" unique_id=1705453412]
@@ -126,10 +236,13 @@ custom_minimum_size = Vector2(116, 116)
 custom_maximum_size = Vector2(116, 116)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Inspect Map"
+theme_override_styles/normal = SubResource("StyleBoxTexture_h2tau")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_70d3y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qdu1p")
+script = ExtResource("4_xo8aq")
 
 [node name="Spacer" type="PanelContainer" parent="UIManager/RightPanel" unique_id=1097116256]
-custom_minimum_size = Vector2(0, 456)
+custom_minimum_size = Vector2(0, 320)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")
@@ -152,17 +265,23 @@ theme_override_constants/separation = 24
 [node name="EscapeMenuButton" type="Button" parent="UIManager/LeftPanel" unique_id=2126701158]
 custom_minimum_size = Vector2(116, 116)
 layout_mode = 2
-text = "Escape Menu"
+theme_override_styles/normal = SubResource("StyleBoxTexture_oc4l8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xo8aq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fxfak")
 
 [node name="SkinsButton" type="Button" parent="UIManager/LeftPanel" unique_id=2047385862]
 custom_minimum_size = Vector2(116, 116)
 layout_mode = 2
-text = "Skins"
+theme_override_styles/normal = SubResource("StyleBoxTexture_2bpht")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_31m62")
+theme_override_styles/hover = SubResource("StyleBoxTexture_50h6r")
 
 [node name="AchievementsButton" type="Button" parent="UIManager/LeftPanel" unique_id=1259573194]
 custom_minimum_size = Vector2(116, 116)
 layout_mode = 2
-text = "Achievements"
+theme_override_styles/normal = SubResource("StyleBoxTexture_uhltn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ppjn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8uawr")
 
 [node name="TestButton1" type="Button" parent="UIManager/LeftPanel" unique_id=2135828388]
 custom_minimum_size = Vector2(116, 116)
@@ -177,30 +296,6 @@ layout_mode = 2
 text = "TestMap2"
 script = ExtResource("2_14tvy")
 map = -2
-
-[node name="SkinsIconWithBackground" type="Sprite2D" parent="." unique_id=1733110861]
-position = Vector2(207, 219)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_31fyy")
-
-[node name="AchievementIconWithBackground" type="Sprite2D" parent="." unique_id=1766895816]
-position = Vector2(205, 359)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_g01m3")
-
-[node name="PaperNotesWoodBackground" type="Sprite2D" parent="." unique_id=843135914]
-position = Vector2(1595, 251)
-texture = ExtResource("5_mumph")
-
-[node name="EscapeMenuIconWithBackground" type="Sprite2D" parent="." unique_id=932052305]
-position = Vector2(208, 79)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_vovoe")
-
-[node name="InspectMapIconWithBackground" type="Sprite2D" parent="." unique_id=1012854407]
-position = Vector2(1809, 485)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_vovoe")
 
 [node name="SettingsMenuBoat" type="Sprite2D" parent="." unique_id=1745825818]
 visible = false

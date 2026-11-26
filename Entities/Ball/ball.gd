@@ -7,6 +7,7 @@ const MIN_LINE_WIDTH: float = 10
 const LINE_WIDTH_SCALE: float = 0.05
 const IMPULSE_FORCE_SCALE: float = 3
 
+@onready var ballCam: Camera2D = %BallCam
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @onready var arrow: Sprite2D = $Arrow
 @onready var shootingPowerLine: Line2D = $ShootingPowerLine
@@ -25,6 +26,10 @@ var isAiming: bool = false
 var time: float = 0.0
 
 func _ready() -> void:
+	GameManager.ballCam = ballCam
+	GameManager.currentCam = ballCam
+	ballCam.make_current()
+	
 	input_event.connect(_on_input_event)
 	sleeping_state_changed.connect(_on_sleeping_changed)
 	body_entered.connect(_on_collision)

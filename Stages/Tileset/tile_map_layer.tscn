@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2ewx6gsy4we1"]
 
 [ext_resource type="Texture2D" uid="uid://dtsm60vc4k61j" path="res://Stages/Tileset/Tileset.png" id="1_8bbm1"]
+[ext_resource type="Script" uid="uid://dvipxbfrdoyih" path="res://Stages/Tileset/tile_map_layer.gd" id="2_6k0ly"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6k0ly"]
 texture = ExtResource("1_8bbm1")
@@ -69,3 +70,4 @@ sources/1 = SubResource("TileSetAtlasSource_6k0ly")
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1666949733]
 tile_set = SubResource("TileSet_t1yug")
+script = ExtResource("2_6k0ly")
