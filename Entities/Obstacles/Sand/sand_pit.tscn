@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dwrmgs4ng5ej1"]
+
+[ext_resource type="Texture2D" uid="uid://xqh0t1bw3pk7" path="res://Stages/Tileset/Sand dunes.png" id="1_8tkk8"]
+[ext_resource type="Script" uid="uid://cbdv3yp32g4hn" path="res://Entities/Obstacles/Sand/sand_pit.gd" id="1_c2h4v"]
+
+[sub_resource type="Curve2D" id="Curve2D_c2h4v"]
+_data = {
+"points": PackedVector2Array(-6.358951, -6.1132593, 24.640646, -24.280928, 7, 13, -5.4505377, -5.662286, 5.4505377, 5.662286, 69, 11, -2.2169945, -15.976183, 2.2169945, 15.976183, 86, 29.5, 5.061696, -6.0131025, -5.061696, 6.0131025, 81, 53, 8.021483, -0.8668617, -8.021483, 0.8668617, 52, 66, 11.367384, 10.668368, -11.367384, -10.668368, 10, 58, 0, 0, 0, 0, 2, 28, -2.6802745, -11.447006, 2.6802745, 11.447006, 7, 13)
+}
+point_count = 8
+
+[node name="Sand Pit" type="Area2D" unique_id=1909405057]
+scale = Vector2(2, 2)
+script = ExtResource("1_c2h4v")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1323010283]
+curve = SubResource("Curve2D_c2h4v")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=140303385]
+clip_children = 2
+texture_repeat = 2
+texture = ExtResource("1_8tkk8")
+
+[node name="Outline" type="Line2D" parent="Polygon2D" unique_id=134717583]
+points = PackedVector2Array(40.5, 0)
+width = 5.0
+default_color = Color(0.80899394, 0.62150586, 0.43454787, 1)
+
+[node name="Shadow" type="Line2D" parent="Polygon2D" unique_id=244697099]
+width = 15.0
+default_color = Color(0.49788707, 0.357168, 0.20989397, 0.36862746)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=530074065]
