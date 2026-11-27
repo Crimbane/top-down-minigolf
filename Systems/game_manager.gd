@@ -7,8 +7,8 @@ var mapInspectCam: Camera2D
 var mapNode: Node
 var tileMapLayer: TileMapLayer
 var ballCam: Camera2D
+var ball: Ball
 
-var currentCam: Camera2D
 var currentHole: int = 0
 var currentHolePar: int = 0
 var strokes: int = 0
@@ -27,6 +27,7 @@ var MapInfo: Dictionary[Map, MapData] = {
 	})
 }
 var currentMap: Map = Map.One
+var centerOfCurrentMap: Vector2
 
 func _ready() -> void:
 	pass
@@ -57,3 +58,24 @@ func changeMap(nextMap: Map) -> void:
 	strokes = 0
 	
 	uiManager.updateLabels()
+
+
+func changeCam(_nextCam: Camera2D = null) -> void:
+	if ballCam.is_current():
+		ball.isAiming = false
+		ball.shootingPowerLine.visible = false
+		ball.arrow.visible = false
+		ball.animationPlayer.current_animation = ""
+		
+		uiManager.InspectModeText.visible = true
+		
+		mapInspectCam.position = centerOfCurrentMap
+		mapInspectCam.make_current()
+	else:
+		if ball.sleeping:
+			ball.arrow.visible = true
+			ball.animationPlayer.current_animation = ball.arrowBounceAnimation
+		
+		uiManager.InspectModeText.visible = false
+		
+		ballCam.make_current()

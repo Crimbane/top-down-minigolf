@@ -17,6 +17,14 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_14tvy"]
 font_size = 48
 
+[sub_resource type="LabelSettings" id="LabelSettings_nrqo6"]
+font_size = 48
+font_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+outline_size = 10
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_offset = Vector2(5, 5)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjc7g"]
 texture = ExtResource("5_mumph")
 
@@ -162,6 +170,26 @@ text = "0"
 label_settings = SubResource("LabelSettings_14tvy")
 horizontal_alignment = 1
 
+[node name="MapInspectModeText" type="Label" parent="UIManager" unique_id=1482206067]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -117.0
+offset_right = 241.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[ Map Inspect Mode ]"
+label_settings = SubResource("LabelSettings_nrqo6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="RightPanel" type="VBoxContainer" parent="UIManager" unique_id=736543184]
 layout_mode = 1
 anchors_preset = 1
@@ -186,7 +214,7 @@ layout_mode = 2
 theme_override_constants/separation = 32
 
 [node name="Spacer" type="PanelContainer" parent="UIManager/RightPanel/HoleInfoPanel/HolePanel" unique_id=1566768195]
-custom_minimum_size = Vector2(0, 4)
+custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")

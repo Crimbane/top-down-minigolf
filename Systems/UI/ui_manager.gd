@@ -2,6 +2,7 @@ class_name UIManager
 extends Control
 
 
+@onready var InspectModeText: Label = %MapInspectModeText
 @onready var strokesLabel: Label = %StrokesValue
 @onready var holeLabel: Label = %HoleValue
 @onready var parLabel: Label = %ParValue

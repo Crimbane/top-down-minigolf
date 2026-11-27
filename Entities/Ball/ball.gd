@@ -1,3 +1,4 @@
+class_name Ball
 extends RigidBody2D
 
 
@@ -26,8 +27,8 @@ var isAiming: bool = false
 var time: float = 0.0
 
 func _ready() -> void:
+	GameManager.ball = self
 	GameManager.ballCam = ballCam
-	GameManager.currentCam = ballCam
 	ballCam.make_current()
 	
 	input_event.connect(_on_input_event)
@@ -56,7 +57,10 @@ func _process(_delta: float) -> void:
 		trail.add_point(global_position)
 		if trail.points.size() > 50:
 			trail.remove_point(0)
-	
+
+
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left Click"):
 		if isAiming:
@@ -70,21 +74,23 @@ func _unhandled_input(event: InputEvent) -> void:
 			animationPlayer.current_animation = arrowBounceAnimation
 
 func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_pressed("Left Click"):
+	if event.is_action_pressed("Left Click") and not GameManager.mapInspectCam.is_current():
 		if not isAiming and sleeping and shaderMaterial and texture:
 			isAiming = true
 			shootingPowerLine.visible = true
 			arrow.visible = false
 			animationPlayer.current_animation = ""
-			texture.scale = Vector2(0.1, 0.1)
-			shaderMaterial.set_shader_parameter("outline_size", 0.5)
-			shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
+			updateBallVisual(false)
+
+
+
 
 func _on_sleeping_changed() -> void:
 	if shaderMaterial and animationPlayer and arrow:
 		if sleeping:
-			arrow.visible = true
-			animationPlayer.current_animation = arrowBounceAnimation
+			if not GameManager.mapInspectCam.is_current():
+				arrow.visible = true
+				animationPlayer.current_animation = arrowBounceAnimation
 			
 			var currentDirection = shaderMaterial.get_shader_parameter("direction")
 			var currentTime = shaderMaterial.get_shader_parameter("time")
@@ -101,24 +107,33 @@ func _on_sleeping_changed() -> void:
 			arrow.visible = false
 			animationPlayer.current_animation = ""
 
+
+
+
 func _on_mouse_entered() -> void:
+	if GameManager.mapInspectCam.is_current():
+		return
+	
 	if sleeping and not isAiming and shaderMaterial and texture:
 		arrow.visible = false
 		animationPlayer.current_animation = ""
-		texture.scale = Vector2(0.125, 0.125)
-		shaderMaterial.set_shader_parameter("outline_size", 1.0)
-		shaderMaterial.set_shader_parameter("outline_color", Color(1.0, 1.0, 1.0, 1.0))
+		updateBallVisual(true)
 
 func _on_mouse_exited() -> void:
+	if GameManager.mapInspectCam.is_current():
+		return
+	
 	if sleeping and not isAiming and shaderMaterial and texture:
 		arrow.visible = true
 		animationPlayer.current_animation = arrowBounceAnimation
-		texture.scale = Vector2(0.1, 0.1)
-		shaderMaterial.set_shader_parameter("outline_size", 0.5)
-		shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
+		updateBallVisual(false)
+
+
+
 
 func _on_collision(_collisionObject: Node) -> void:
 	shaderMaterial.set_shader_parameter("direction", -linear_velocity.normalized())
+
 
 func handleShooting() -> void:
 	isAiming = false
@@ -131,3 +146,16 @@ func handleShooting() -> void:
 	apply_central_impulse(-direction * power * IMPULSE_FORCE_SCALE)
 	
 	GameManager.addStrokes()
+
+
+
+
+func updateBallVisual(hover: bool) -> void:
+	if hover:
+		texture.scale = Vector2(0.125, 0.125)
+		shaderMaterial.set_shader_parameter("outline_size", 1.0)
+		shaderMaterial.set_shader_parameter("outline_color", Color(1.0, 1.0, 1.0, 1.0))
+	else:
+		texture.scale = Vector2(0.1, 0.1)
+		shaderMaterial.set_shader_parameter("outline_size", 0.5)
+		shaderMaterial.set_shader_parameter("outline_color", Color(0.0, 0.0, 0.0, 1.0))
