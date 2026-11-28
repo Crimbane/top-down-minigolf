@@ -8,7 +8,10 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
-   sodipodi:docname="Speed up.svg"
+   sodipodi:docname="Speed arrows save.svg"
+   inkscape:export-filename="Speed outwards.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,15 +27,24 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="8.4852813"
-     inkscape:cy="108.54089"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="77.616018"
+     inkscape:cy="98.470144"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g43">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="52.916664"
+       height="52.916664"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
   <defs
      id="defs1">
     <marker
@@ -57,16 +69,18 @@
     </marker>
   </defs>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="Speed up"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        style="display:none;fill:none;stroke:#895628;stroke-width:1.18266;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWide);paint-order:stroke fill markers"
        d="M 25.99061,29.649024 V 151.46278"
        id="path1" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#f4f4f4;stroke-width:2.35794;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 10.868801,23.09063 26.46572,7.4937125 42.047866,23.075857 38.750767,26.372944 26.455227,14.077395 14.160068,26.372559 Z"
+       style="fill:#9ddaf2;fill-opacity:1;stroke:#1fa5dc;stroke-width:3.04955;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 1.5246504,23.3727 26.470147,7.0612778 51.392017,23.35725 46.118682,26.805379 26.453365,13.946563 6.7886573,26.804976 Z"
        id="path4" />
     <use
        x="0"
@@ -74,5 +88,186 @@
        xlink:href="#path4"
        id="use4"
        transform="translate(0,19.05001)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Arrows pointing in x8"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       id="g18"
+       inkscape:label="Double arrow"
+       inkscape:transform-center-y="0.02370105"
+       inkscape:transform-center-x="0.0031955">
+      <path
+         style="fill:#9ddaf2;fill-opacity:1;stroke:#1fa5dc;stroke-width:0.824635;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 19.715932,51.576115 6.745597,-4.410827 6.739206,4.40665 -1.425981,0.932419 -5.317764,-3.477196 -5.3176,3.477087 z"
+         id="path4-8"
+         inkscape:transform-center-y="23.376489" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path4-8"
+         inkscape:transform-center-y="23.376489"
+         id="use18"
+         transform="translate(0,-5.2916669)" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       inkscape:transform-center-y="15.88859"
+       id="use19"
+       transform="rotate(-45,26.458334,26.458334)"
+       inkscape:transform-center-x="-15.88859" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       inkscape:transform-center-y="15.88859"
+       id="use20"
+       transform="rotate(45,26.458333,26.458334)"
+       inkscape:transform-center-x="15.88859" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       id="use21"
+       transform="rotate(90,26.458334,26.458334)"
+       inkscape:transform-center-x="20.730654" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       id="use22"
+       transform="rotate(-90,26.458334,26.458334)"
+       inkscape:transform-center-x="-20.730655" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       inkscape:transform-center-y="-15.88859"
+       id="use23"
+       transform="rotate(-135,26.458333,26.458334)"
+       inkscape:transform-center-x="-15.888589" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       inkscape:transform-center-y="-15.888589"
+       id="use24"
+       transform="rotate(135,26.458333,26.458334)"
+       inkscape:transform-center-x="15.88859" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g18"
+       inkscape:transform-center-y="-20.730655"
+       id="use25"
+       transform="rotate(180,26.458334,26.458334)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Arrows pointing in x4"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       id="g30"
+       inkscape:transform-center-x="13.15625"
+       inkscape:transform-center-y="13.161061"
+       transform="matrix(0.53533855,0.53533855,-0.53533855,0.53533855,21.712334,2.8760025)">
+      <path
+         style="display:inline;fill:#9ddaf2;fill-opacity:1;stroke:#1fa5dc;stroke-width:1.77299;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 11.966518,48.130596 14.503175,-9.483372 14.489439,9.474388 -3.065888,2.004724 -11.433308,-7.476045 -11.432954,7.47581 z"
+         id="path4-1"
+         inkscape:transform-center-y="17.928446"
+         inkscape:transform-center-x="-0.004491842" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path4-1"
+         inkscape:transform-center-x="-0.004491842"
+         inkscape:transform-center-y="17.928446"
+         id="use30"
+         transform="translate(0,-11.90625)" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g30"
+       inkscape:transform-center-x="-13.161061"
+       inkscape:transform-center-y="13.15625"
+       id="use37"
+       transform="rotate(-90,26.458333,26.458333)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g30"
+       inkscape:transform-center-x="13.161061"
+       inkscape:transform-center-y="-13.15625"
+       id="use38"
+       transform="rotate(90,26.458333,26.458333)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g30"
+       inkscape:transform-center-x="-13.15625"
+       inkscape:transform-center-y="-13.161061"
+       id="use39"
+       transform="rotate(180,26.458333,26.458333)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g43"
+     inkscape:label="Arrows pointing out x4"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       id="g40"
+       transform="matrix(-0.53533855,-0.53533855,0.53533855,-0.53533855,4.891832,76.362786)"
+       inkscape:transform-center-x="13.15625"
+       inkscape:transform-center-y="13.161061">
+      <path
+         style="display:inline;fill:#9ddaf2;fill-opacity:1;stroke:#1fa5dc;stroke-width:1.77299;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 11.966518,48.130596 14.503175,-9.483372 14.489439,9.474388 -3.065888,2.004724 -11.433308,-7.476045 -11.432954,7.47581 z"
+         id="path39"
+         inkscape:transform-center-y="17.928446"
+         inkscape:transform-center-x="-0.004491842" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path4-1"
+         inkscape:transform-center-x="-0.004491842"
+         inkscape:transform-center-y="17.928446"
+         id="use40"
+         transform="translate(0,-11.90625)"
+         style="display:inline" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g40"
+       inkscape:transform-center-x="-13.161061"
+       inkscape:transform-center-y="13.15625"
+       id="use43"
+       transform="rotate(-90,26.458333,26.458333)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g40"
+       inkscape:transform-center-x="13.161061"
+       inkscape:transform-center-y="-13.15625"
+       id="use44"
+       transform="rotate(90,26.458333,26.458333)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g40"
+       inkscape:transform-center-x="-13.15625"
+       inkscape:transform-center-y="-13.161061"
+       id="use45"
+       transform="rotate(180,26.458333,26.458333)" />
   </g>
 </svg>
