@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733333"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="Beach ball.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3644951"
+     inkscape:cx="-30.047744"
+     inkscape:cy="132.28336"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Beach ball"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="circle4"
+       style="opacity:1;fill:#00e4e5;stroke:none;stroke-width:3.5948;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1"
+       d="M 33.866667 33.866667 L 0.012919108 33.866667 A 33.853905 33.853905 0 0 0 16.940051 63.184774 L 33.866667 33.866667 z " />
+    <path
+       id="path16"
+       style="opacity:1;fill:#8d00e5;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none"
+       d="M 33.866667 33.866667 L 16.940051 63.184774 A 33.853905 33.853905 0 0 0 33.866667 67.720414 A 33.853905 33.853905 0 0 0 50.793282 63.184774 L 33.866667 33.866667 z " />
+    <path
+       id="path15"
+       style="opacity:1;fill:#e50400;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none"
+       d="M 33.866667 33.866667 L 50.793282 63.184774 A 33.853905 33.853905 0 0 0 67.720414 33.866667 L 33.866667 33.866667 z " />
+    <path
+       id="path14"
+       style="opacity:1;fill:#e5b000;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none"
+       d="M 33.866667 33.866667 L 67.720414 33.866667 A 33.853905 33.853905 0 0 0 50.793282 4.5485596 L 33.866667 33.866667 z " />
+    <path
+       id="path13"
+       style="opacity:1;fill:#00e519;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none"
+       d="M 16.940051 4.5485596 A 33.853905 33.853905 0 0 0 0.012919108 33.866667 L 33.866667 33.866667 L 16.940051 4.5485596 z " />
+    <path
+       id="path12"
+       style="opacity:1;fill:#e4e500;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1;stroke-opacity:1;stroke-dasharray:none"
+       d="M 16.940051 4.5485596 L 33.866667 33.866667 L 50.793282 4.5485596 A 33.853905 33.853905 0 0 0 33.866667 0.012919108 A 33.853905 33.853905 0 0 0 16.940051 4.5485596 z " />
+    <circle
+       style="fill:#ededed;stroke:none;stroke-width:0.600001;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;opacity:1;fill-opacity:1;stroke-opacity:1"
+       id="path1"
+       cx="33.866665"
+       cy="33.866665"
+       r="5.6505036"
+       inkscape:label="center" />
+  </g>
+</svg>

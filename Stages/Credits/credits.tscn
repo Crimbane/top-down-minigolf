@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b4vbtgn7yoygg" path="res://Stages/Tileset/tile_map_layer_water.tscn" id="1_3oqmu"]
 [ext_resource type="Script" uid="uid://b152q2ikb6nkk" path="res://Stages/Credits/credits.gd" id="1_qd21q"]
 [ext_resource type="Texture2D" uid="uid://dldk8p1svxsfh" path="res://Stages/Main Menu/Art/Boat button.png" id="2_wlynr"]
+[ext_resource type="Texture2D" uid="uid://c4s0dpeh6v7fq" path="res://Stages/Main Menu/Art/Beach ball.svg" id="4_kltpt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1yug"]
 font_size = 40
@@ -18,7 +19,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_onxlf"]
 font_size = 20
-outline_size = 2
+outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_64m3x"]
@@ -68,23 +69,7 @@ grow_horizontal = 2
 text = "Crimtane and olem50"
 label_settings = SubResource("LabelSettings_fyjvv")
 
-[node name="Audio" type="Label" parent="Made By" unique_id=11507148]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -147.5
-offset_top = 273.0
-offset_right = 147.5
-offset_bottom = 301.0
-grow_horizontal = 2
-text = "With audio from Ovani Sounds
-
-
-Not finished yet"
-label_settings = SubResource("LabelSettings_onxlf")
-
-[node name="Control" type="Control" parent="Made By" unique_id=1109734876]
+[node name="Boat Positioner" type="Control" parent="Made By" unique_id=1109734876]
 z_index = -1
 layout_mode = 1
 anchors_preset = 8
@@ -99,11 +84,36 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BoatButton" type="Sprite2D" parent="Made By/Control" unique_id=1896075775]
+[node name="Boat" type="Sprite2D" parent="Made By/Boat Positioner" unique_id=1896075775]
 position = Vector2(37.535, 70.42)
 rotation = 3.1415927
 scale = Vector2(2.025, 2.025)
 texture = ExtResource("2_wlynr")
+
+[node name="Audio" type="Label" parent="." unique_id=11507148]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -147.5
+offset_top = -240.0
+offset_right = 147.5
+offset_bottom = -149.99945
+grow_horizontal = 2
+grow_vertical = 0
+text = "With audio from 
+Ovani Sounds
+"
+label_settings = SubResource("LabelSettings_onxlf")
+
+[node name="BeachBall" type="Sprite2D" parent="Audio" unique_id=1343873734]
+show_behind_parent = true
+position = Vector2(70.5, 86.7)
+rotation = -0.62133723
+texture = ExtResource("4_kltpt")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1080218566]
 layout_mode = 1
