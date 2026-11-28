@@ -24,6 +24,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not GameManager.mapInspectCam.is_current():
 		return
 	
+	if event.is_action_pressed("Escape"):
+		GameManager.changeCam()
+		moveCam = false
+	
 	if event.is_action_pressed("Left Click") and not moveCam:
 		moveCam = true
 		prevPos = event.position

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dyv1f7rv35wvi" path="res://Systems/UI/ui.tscn" id="1_bky8d"]
 [ext_resource type="Script" uid="uid://b5q20xcwdoo6a" path="res://Stages/Game/map_container.gd" id="2_hiae3"]
+[ext_resource type="PackedScene" uid="uid://b30ihjyvfis6s" path="res://Stages/Game/map_inspect_cam.tscn" id="3_hiae3"]
 
 [node name="Game" type="Node" unique_id=2143409741]
 
@@ -9,3 +10,5 @@
 
 [node name="MapContainer" type="Node2D" parent="." unique_id=1209809435]
 script = ExtResource("2_hiae3")
+
+[node name="MapInspectCam" parent="." unique_id=593422274 instance=ExtResource("3_hiae3")]

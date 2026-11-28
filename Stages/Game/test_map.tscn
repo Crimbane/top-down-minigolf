@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dr7pv7miiqn11" path="res://Entities/Obstacles/Wall/wall.tscn" id="5_kkduf"]
 [ext_resource type="PackedScene" uid="uid://nkrb823mc1n3" path="res://Entities/Ball/ball.tscn" id="6_2u773"]
 [ext_resource type="PackedScene" uid="uid://boedkfyjjsgu7" path="res://Entities/Obstacles/Spinner/spinner.tscn" id="6_dtab2"]
-[ext_resource type="PackedScene" uid="uid://b30ihjyvfis6s" path="res://Stages/Game/map_inspect_cam.tscn" id="7_onwvy"]
 
 [node name="TestMap" type="Node" unique_id=1558283375]
 
@@ -29,5 +28,3 @@ position = Vector2(463, 360)
 
 [node name="Ball" parent="." unique_id=893477834 instance=ExtResource("6_2u773")]
 position = Vector2(1466, 307)
-
-[node name="MapInspectCam" parent="." unique_id=593422274 instance=ExtResource("7_onwvy")]

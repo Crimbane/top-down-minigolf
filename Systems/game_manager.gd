@@ -58,6 +58,7 @@ func changeMap(nextMap: Map) -> void:
 	strokes = 0
 	
 	uiManager.updateLabels()
+	uiManager.InspectModePanel.visible = false
 
 
 func changeCam(_nextCam: Camera2D = null) -> void:
@@ -67,7 +68,7 @@ func changeCam(_nextCam: Camera2D = null) -> void:
 		ball.arrow.visible = false
 		ball.animationPlayer.current_animation = ""
 		
-		uiManager.InspectModeText.visible = true
+		uiManager.InspectModePanel.visible = true
 		
 		mapInspectCam.position = centerOfCurrentMap
 		mapInspectCam.make_current()
@@ -76,6 +77,6 @@ func changeCam(_nextCam: Camera2D = null) -> void:
 			ball.arrow.visible = true
 			ball.animationPlayer.current_animation = ball.arrowBounceAnimation
 		
-		uiManager.InspectModeText.visible = false
+		uiManager.InspectModePanel.visible = false
 		
 		ballCam.make_current()

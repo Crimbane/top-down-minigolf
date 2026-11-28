@@ -17,14 +17,6 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_14tvy"]
 font_size = 48
 
-[sub_resource type="LabelSettings" id="LabelSettings_nrqo6"]
-font_size = 48
-font_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-outline_size = 10
-shadow_size = 10
-shadow_color = Color(0, 0, 0, 0.23529412)
-shadow_offset = Vector2(5, 5)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjc7g"]
 texture = ExtResource("5_mumph")
 
@@ -126,6 +118,17 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_nrqo6"]
+font_size = 48
+font_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+outline_size = 10
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xo8aq"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
 [node name="UI" type="CanvasLayer" unique_id=1691093207]
 
 [node name="UIManager" type="Control" parent="." unique_id=2022582612]
@@ -170,35 +173,15 @@ text = "0"
 label_settings = SubResource("LabelSettings_14tvy")
 horizontal_alignment = 1
 
-[node name="MapInspectModeText" type="Label" parent="UIManager" unique_id=1482206067]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -241.5
-offset_top = -117.0
-offset_right = 241.5
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "[ Map Inspect Mode ]"
-label_settings = SubResource("LabelSettings_nrqo6")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="RightPanel" type="VBoxContainer" parent="UIManager" unique_id=736543184]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -200.0
-offset_top = 20.0
+offset_top = 51.0
 offset_right = -20.0
-offset_bottom = 1060.0
+offset_bottom = 1029.0
 grow_horizontal = 0
 theme_override_constants/separation = 36
 
@@ -269,25 +252,12 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_70d3y")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qdu1p")
 script = ExtResource("4_xo8aq")
 
-[node name="Spacer" type="PanelContainer" parent="UIManager/RightPanel" unique_id=1097116256]
-custom_minimum_size = Vector2(0, 320)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_fjc7g")
-
-[node name="RestartMapButton" type="Button" parent="UIManager/RightPanel" unique_id=608452145]
-custom_minimum_size = Vector2(116, 116)
-custom_maximum_size = Vector2(116, 116)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Restart Map"
-
 [node name="LeftPanel" type="VBoxContainer" parent="UIManager" unique_id=592395168]
 layout_mode = 1
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 137.0
-offset_bottom = 1060.0
+offset_left = 51.0
+offset_top = 51.0
+offset_right = 168.0
+offset_bottom = 1029.0
 theme_override_constants/separation = 24
 
 [node name="EscapeMenuButton" type="Button" parent="UIManager/LeftPanel" unique_id=2126701158]
@@ -324,6 +294,79 @@ layout_mode = 2
 text = "TestMap2"
 script = ExtResource("2_14tvy")
 map = -2
+
+[node name="MapInspectModePanel" type="Control" parent="UIManager" unique_id=1607377455]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="InfoText" type="RichTextLabel" parent="UIManager/MapInspectModePanel" unique_id=1472352451]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -141.5
+offset_top = -60.0
+offset_right = 141.5
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+bbcode_enabled = true
+text = "Press [img]res://Systems/UI/Art/Key Escape.png[/img] to exit map inspect mode."
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapInspectModeText" type="Label" parent="UIManager/MapInspectModePanel" unique_id=1482206067]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -130.0
+offset_right = 241.5
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[ Map Inspect Mode ]"
+label_settings = SubResource("LabelSettings_nrqo6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftBlock" type="Panel" parent="UIManager/MapInspectModePanel" unique_id=1944369594]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xo8aq")
+
+[node name="RightBlock" type="Panel" parent="UIManager/MapInspectModePanel" unique_id=1224720107]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xo8aq")
 
 [node name="SettingsMenuBoat" type="Sprite2D" parent="." unique_id=1745825818]
 visible = false
